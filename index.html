@@ -14,17 +14,29 @@
             loading-screen="enabled: false;"
             arjs="sourceType: webcam; debugUIEnabled: false; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960;"
         >
-                <a-image
+               <!-- <a-image
                     src="assets/asset.png"
                     look-at="[gps-camera]"
                     scale="10 10 10"
                     gps-entity-place="latitude: 39.31232595081319; longitude: -7.441707272082569;"
-                ></a-image>
+                ></a-image> -->
 
                 <a-entity 
                 gltf-model="assets/scene.gltf" 
                 scale="0.15 0.15 0.15" 
-                gps-entity-place="latitude: 39.31215694860458; longitude: -7.441807100549341;" 
+                gps-entity-place="latitude: 39.31250973863044; longitude: -7.443759748712183;" 
+                animation-mixer/></a-entity>
+
+                <a-entity 
+                gltf-model="assets/scene.gltf" 
+                scale="0.15 0.15 0.15" 
+                gps-entity-place="latitude: 39.311513621037044; longitude: -7.444167444482447;" 
+                animation-mixer/></a-entity>
+
+                <a-entity 
+                gltf-model="assets/scene.gltf" 
+                scale="0.15 0.15 0.15" 
+                gps-entity-place="latitude: 39.3128957303857; longitude: -7.445020386949183;" 
                 animation-mixer/></a-entity>
 
             <a-camera gps-camera rotation-reader></a-camera>
