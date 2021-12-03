@@ -26,6 +26,7 @@
                 let camPos = this.el.object3D.position
                 let boxPos = this.box.object3D.position
                 this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
+                console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
               }
             })
             
