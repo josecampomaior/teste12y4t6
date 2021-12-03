@@ -12,7 +12,7 @@
                
             AFRAME.registerComponent("foo", {
               init: function() {
-                this.box = document.querySelector(i)
+                this.box = document.querySelector("m"+i)
                 this.text = document.querySelector("a-text")
               },
               tick: function() {
@@ -40,7 +40,7 @@
                     gps-entity-place="latitude: 39.31232595081319; longitude: -7.441707272082569;"
                 ></a-image> -->
 
-                <a-entity id="1"
+                <a-entity id="m1"
                 gltf-model="assets/scene.gltf" 
                 scale="2.5 2.5 2.5" 
                 gps-entity-place="latitude: 39.312057336981134; longitude: -7.441721269860865;"
@@ -48,7 +48,7 @@
                 <a-text width="20" color="white" position="-0.75 -3 0"> </a-text>
                 </a-entity>
 
-                <a-entity id="2"
+                <a-entity id="m2"
                 gltf-model="assets/scene.gltf" 
                 scale="2.5 2.5 2.5" 
                 gps-entity-place="latitude: 39.31229391435525; longitude: -7.441506693139673;" 
@@ -56,7 +56,7 @@
                 <a-text width="20" color="white" position="-0.75 -3 0"> </a-text>
                 </a-entity>
 
-                <a-entity id="3"
+                <a-entity id="m3"
                 gltf-model="assets/scene.gltf" 
                 scale="2.5 2.5 2.5" 
                 gps-entity-place="latitude: 39.312655004594696; longitude: -7.442236253991724;" 
