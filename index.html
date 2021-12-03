@@ -8,21 +8,27 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script>
             var metros = "m";
-            for (let i = 1; index < 4; i++) {
+            var demo = "#m"
+            var texto = 0;
                
             AFRAME.registerComponent("foo", {
+            
               init: function() {
-                this.box = document.querySelector("m"+i)
+              for (let i = 1; i < 4; i++) {
+              	texto = demo + i
+                this.box = document.querySelector(texto)
                 this.text = document.querySelector("a-text")
-              },
+                console.log(texto)
+            }
+              }
+              ,
               tick: function() {
                 let camPos = this.el.object3D.position
                 let boxPos = this.box.object3D.position
                 this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
               }
             })
-
-            }
+            
           
           </script>
     </head>
