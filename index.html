@@ -15,7 +15,7 @@
               tick: function() {
                 let camPos = this.el.object3D.position
                 let boxPos = this.box.object3D.position
-                this.text.setAttribute("value", camPos.distanceTo(boxPos))
+                this.text.setAttribute("value", parseInt(camPos.distanceTo(boxPos)))
               }
             })
           
