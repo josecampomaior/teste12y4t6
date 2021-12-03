@@ -8,31 +8,60 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script>
             var metros = "m";
-            var c = "#c"
-            var t = "#t"
-            var texto = 0;
-            var caixa = 0;
                
-            AFRAME.registerComponent("foo", {
+            AFRAME.registerComponent("foo1", {
             
-              init: function() {
-              for (let i = 1; i < 4; i++) {
-              	caixa = c + i
-                texto = t + i
-                this.box = document.querySelector(caixa)
-                this.text = document.querySelector(texto)
-                //console.log(caixa)
-                //console.log(texto)
+            init: function() {
+              this.box = document.querySelector("#c1")
+              this.text = document.querySelector("#t1")
+              //console.log(caixa)
+              //console.log(texto)
+          }
+            
+            ,
+            tick: function() {
+              let camPos = this.el.object3D.position
+              let boxPos = this.box.object3D.position
+              this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
+              //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
             }
-              }
-              ,
-              tick: function() {
-                let camPos = this.el.object3D.position
-                let boxPos = this.box.object3D.position
-                this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
-                //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
-              }
-            })
+          })
+          
+          AFRAME.registerComponent("foo2", {
+            
+            init: function() {
+              this.box = document.querySelector("#c2")
+              this.text = document.querySelector("#t2")
+              //console.log(caixa)
+              //console.log(texto)
+          }
+            
+            ,
+            tick: function() {
+              let camPos = this.el.object3D.position
+              let boxPos = this.box.object3D.position
+              this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
+              //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
+            }
+          })
+          
+          AFRAME.registerComponent("foo3", {
+            
+            init: function() {
+              this.box = document.querySelector("#c3")
+              this.text = document.querySelector("#t3")
+              //console.log(caixa)
+              //console.log(texto)
+          }
+            
+            ,
+            tick: function() {
+              let camPos = this.el.object3D.position
+              let boxPos = this.box.object3D.position
+              this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
+              //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
+            }
+          })
             
           
           </script>
@@ -58,6 +87,7 @@
                 look-at="[gps-camera]"/>
                 <a-text id="t1" width="20" color="white" position="-0.75 -3 0"> </a-text>
                 </a-entity>
+                <a-camera gps-camera rotation-reader foo1></a-camera>
 
                 <a-entity id="c2"
                 gltf-model="assets/scene.gltf" 
@@ -66,6 +96,7 @@
                 look-at="[gps-camera]"/>
                 <a-text id="t2" width="20" color="white" position="-0.75 -3 0"> </a-text>
                 </a-entity>
+                <a-camera gps-camera rotation-reader foo2></a-camera>
 
                 <a-entity id="c3"
                 gltf-model="assets/scene.gltf" 
@@ -74,8 +105,7 @@
                 look-at="[gps-camera]"/>
                 <a-text id="t3" width="20" color="white" position="-0.75 -3 0"> </a-text>
                 </a-entity>
-
-            <a-camera gps-camera rotation-reader foo></a-camera>
+                <a-camera gps-camera rotation-reader foo3></a-camera>
         </a-scene>
     </body>
 </html>
