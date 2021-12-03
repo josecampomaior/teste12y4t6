@@ -8,9 +8,11 @@
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
         <script>
             var metros = "m";
+            for (let i = 1; index < 4; i++) {
+               
             AFRAME.registerComponent("foo", {
               init: function() {
-                this.box = document.querySelector('a-entity')
+                this.box = document.querySelector(i)
                 this.text = document.querySelector("a-text")
               },
               tick: function() {
@@ -19,6 +21,8 @@
                 this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
               }
             })
+
+            }
           
           </script>
     </head>
@@ -36,29 +40,29 @@
                     gps-entity-place="latitude: 39.31232595081319; longitude: -7.441707272082569;"
                 ></a-image> -->
 
-                <a-entity1
+                <a-entity id="1"
                 gltf-model="assets/scene.gltf" 
                 scale="2.5 2.5 2.5" 
                 gps-entity-place="latitude: 39.312057336981134; longitude: -7.441721269860865;"
                 look-at="[gps-camera]"/>
                 <a-text width="20" color="white" position="-0.75 -3 0"> </a-text>
-                </a-entity1>
+                </a-entity>
 
-                <a-entity2
+                <a-entity id="2"
                 gltf-model="assets/scene.gltf" 
                 scale="2.5 2.5 2.5" 
                 gps-entity-place="latitude: 39.31229391435525; longitude: -7.441506693139673;" 
                 look-at="[gps-camera]"/>
                 <a-text width="20" color="white" position="-0.75 -3 0"> </a-text>
-                </a-entity2>
+                </a-entity>
 
-                <a-entity3 
+                <a-entity id="3"
                 gltf-model="assets/scene.gltf" 
                 scale="2.5 2.5 2.5" 
                 gps-entity-place="latitude: 39.312655004594696; longitude: -7.442236253991724;" 
                 look-at="[gps-camera]"/>
                 <a-text width="20" color="white" position="-0.75 -3 0"> </a-text>
-                </a-entity3>
+                </a-entity>
 
             <a-camera gps-camera rotation-reader foo></a-camera>
         </a-scene>
