@@ -6,56 +6,7 @@
         <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
         <script src="https://unpkg.com/aframe-look-at-component@0.8.0/dist/aframe-look-at-component.min.js"></script>
         <script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar-nft.js"></script>
-        <script>
-            var metros = "m";
-               
-            AFRAME.registerComponent("foo1", { 
-            init: function() {
-              this.box = document.querySelector("#c1")
-              this.text = document.querySelector("#t1")
-              //console.log(caixa)
-              //console.log(texto)
-          },
-            tick: function() {
-              let camPos = this.el.object3D.position
-              let boxPos = this.box.object3D.position
-              this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
-              //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
-            }
-          })
-          
-          AFRAME.registerComponent("foo2", {
-            init: function() {
-              this.box = document.querySelector("#c2")
-              this.text = document.querySelector("#t2")
-              //console.log(caixa)
-              //console.log(texto)
-          },
-            tick: function() {
-              let camPos = this.el.object3D.position
-              let boxPos = this.box.object3D.position
-              this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
-              //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
-            }
-          })
-          
-          AFRAME.registerComponent("foo3", {
-            init: function() {
-              this.box = document.querySelector("#c3")
-              this.text = document.querySelector("#t3")
-              //console.log(caixa)
-              //console.log(texto)
-          },
-            tick: function() {
-              let camPos = this.el.object3D.position
-              let boxPos = this.box.object3D.position
-              this.text.setAttribute("value", (parseInt(camPos.distanceTo(boxPos)))+(metros))
-              //console.log((parseInt(camPos.distanceTo(boxPos)))+(metros))
-            }
-          })
-            
-          
-          </script>
+        <script src="distance.js"></script>
     </head>
 
     <body style="margin: 0; overflow: hidden;">
